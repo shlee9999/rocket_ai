@@ -1,7 +1,6 @@
 import ImageWithWrapper from '@/components/ImageWithWrapper';
 import SajuTableSection from '@/components/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
-import { getPercentage } from '@/utils/getPercentage';
 
 // 배경색은 이제 TailwindCSS 커스텀 색상으로 사용
 
@@ -44,8 +43,8 @@ export default function Home() {
             <div
               className='absolute inset-x-0 h-[300px]'
               style={{
-                height: getPercentage(195, figmaLayout.scene1Height),
-                bottom: getPercentage(-6, figmaLayout.scene1Height),
+                height: 'calc(195 * var(--u))',
+                bottom: 'calc(-6 * var(--u))',
               }}
             />
           </ImageWithWrapper>
@@ -64,13 +63,13 @@ export default function Home() {
             <div
               className='absolute inset-0 flex flex-col items-center justify-center text-center '
               style={{
-                paddingTop: getPercentage(23, 215),
+                paddingTop: 'calc(23 * var(--u))',
               }}
             >
               <div
                 className='speech-bubble-text'
                 style={{
-                  maxWidth: getPercentage(195, 215), // 말풍선 너비 대비 텍스트 영역
+                  maxWidth: 'calc(195 * var(--u))', // 말풍선 너비 대비 텍스트 영역
                 }}
               >
                 <p>이제 본격적으로</p>
@@ -92,7 +91,7 @@ export default function Home() {
               position: 'absolute',
               left: 0,
               width: 'calc(153 * var(--u))',
-              bottom: getPercentage(38, figmaLayout.scene2Height),
+              bottom: 'calc(38 * var(--u))',
             }}
           />
           <ImageWithWrapper
@@ -101,7 +100,6 @@ export default function Home() {
             ratioWidth={161}
             ratioHeight={285}
             style={{
-              // marginRight: getPercentage(24, figmaLayout.containerWidth),
               marginLeft: 'calc(24 * var(--u))',
               width: 'calc(161 * var(--u))',
             }}
@@ -126,7 +124,7 @@ export default function Home() {
             <div
               className='absolute inset-0 flex flex-col items-center justify-center text-center speech-bubble-text'
               style={{
-                paddingBottom: getPercentage(22.78, 239),
+                paddingBottom: 'calc(22.78 * var(--u))',
               }}
             >
               <p>제가 oo님의 사주를</p>

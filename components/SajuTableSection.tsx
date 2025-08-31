@@ -1,8 +1,7 @@
-import ImageWithWrapper from './ImageWithWrapper';
-import { getPercentage } from '@/utils/getPercentage';
-import { figmaLayout } from '@/constants/layout';
 import SajuTable from '@/components/SajuTable';
+import { figmaLayout } from '@/constants/layout';
 import { sajuColumns, sajuData } from '@/data/saju-data';
+import ImageWithWrapper from './ImageWithWrapper';
 
 export default function SajuTableSection() {
   return (
@@ -23,28 +22,16 @@ export default function SajuTableSection() {
         <div
           className='border-y-[1px] border-border-secondary'
           style={{
-            top: getPercentage(
-              8,
-              figmaLayout.sajuTableHeight -
-                figmaLayout.SajuTableOuterBorderWidth * 2
-            ),
-            bottom: getPercentage(
-              8,
-              figmaLayout.sajuTableHeight -
-                figmaLayout.SajuTableOuterBorderWidth * 2
-            ),
-            paddingInline: getPercentage(
-              9,
-              figmaLayout.sajuTableWidth -
-                figmaLayout.SajuTableOuterBorderWidth * 2
-            ),
+            top: 'calc(8 * var(--u))',
+            bottom: 'calc(8 * var(--u))',
+            paddingInline: 'calc(9 * var(--u))',
           }}
         >
           {/* 내부 Width: figmaLayout.sajuTableWidth - 24 */}
           <div
             className='flex flex-col justify-between items-center'
             style={{
-              marginTop: getPercentage(32, figmaLayout.sajuTableWidth - 24),
+              marginTop: 'calc(32 * var(--u))',
             }}
           >
             <span className='font-size-sm' style={{ lineHeight: 1 }}>
@@ -54,7 +41,7 @@ export default function SajuTableSection() {
               className='font-bold font-size-lg'
               style={{
                 lineHeight: 1,
-                marginTop: getPercentage(12, figmaLayout.sajuTableWidth - 24),
+                marginTop: 'calc(12 * var(--u))',
               }}
             >
               1980년 8월 27일 08:10
@@ -63,7 +50,7 @@ export default function SajuTableSection() {
           {/* 사주테이블 */}
           <div
             style={{
-              paddingInline: getPercentage(12, figmaLayout.sajuTableWidth - 24),
+              paddingInline: 'calc(12 * var(--u))',
             }}
           >
             <SajuTable columns={sajuColumns} data={sajuData} />
@@ -77,9 +64,9 @@ export default function SajuTableSection() {
           ratioHeight={38}
           style={{
             position: 'absolute',
-            width: getPercentage(56, figmaLayout.sajuTableWidth - 6),
-            top: getPercentage(45, figmaLayout.sajuTableHeight - 6),
-            left: getPercentage(9, figmaLayout.sajuTableWidth - 6),
+            width: 'calc(56 * var(--u))',
+            top: 'calc(45 * var(--u))',
+            left: 'calc(9 * var(--u))',
           }}
         />
         <ImageWithWrapper
@@ -89,9 +76,9 @@ export default function SajuTableSection() {
           ratioHeight={38}
           style={{
             position: 'absolute',
-            width: getPercentage(56, figmaLayout.sajuTableWidth - 6),
-            top: getPercentage(26, figmaLayout.sajuTableHeight - 6),
-            right: getPercentage(9, figmaLayout.sajuTableWidth - 6),
+            width: 'calc(56 * var(--u))',
+            top: 'calc(26 * var(--u))',
+            right: 'calc(9 * var(--u))',
           }}
         />
 
@@ -101,8 +88,8 @@ export default function SajuTableSection() {
           style={{
             top: 0,
             bottom: 0,
-            left: getPercentage(8, figmaLayout.sajuTableWidth),
-            right: getPercentage(8, figmaLayout.sajuTableWidth),
+            left: 'calc(8 * var(--u))',
+            right: 'calc(8 * var(--u))',
           }}
         />
       </div>

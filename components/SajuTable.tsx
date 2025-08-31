@@ -1,8 +1,6 @@
 import { SajuTableCell } from '@/components/SajuTableCell';
-import { figmaLayout } from '@/constants/layout';
 import { Row } from '@/types/SajuTable';
 import { cn } from '@/utils/cn';
-import { getPercentage } from '@/utils/getPercentage';
 
 interface SajuTableProps {
   columns: string[];
@@ -14,8 +12,8 @@ export default function SajuTable({ columns, data }: SajuTableProps) {
     <table
       className='w-full border-collapse'
       style={{
-        marginTop: getPercentage(20, figmaLayout.sajuTableHeight),
-        marginBottom: getPercentage(32, figmaLayout.sajuTableHeight),
+        marginTop: 'calc(20 * var(--u))',
+        marginBottom: 'calc(32 * var(--u))',
       }}
     >
       <thead>
