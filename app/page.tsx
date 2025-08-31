@@ -3,11 +3,6 @@ import SajuTableSection from '@/components/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
 import { pxu } from '@/utils/pxu';
 
-/**
- * [규칙]
- * - 모든 이미지의 크기는 containerWidth를 기준으로 계산
- * - 최소 320px까지 고려된 반응형 레이아웃
- */
 export default function Home() {
   return (
     <main className='m-auto max-w-md relative cq-inline'>
@@ -70,7 +65,7 @@ export default function Home() {
           </ImageWithWrapper>
         </section>
 
-        {/* SCENE 2: 우측 글씨쓰는 장면 */}
+        {/* SCENE 2: 장면2 */}
         <section id='scene2' className='relative mt-5 flex justify-end'>
           {/* 데코 2 */}
           <ImageWithWrapper
@@ -97,7 +92,7 @@ export default function Home() {
           />
         </section>
 
-        {/* SCENE 3: 정리표 */}
+        {/* SCENE 3: 말풍선2 + 장면3 + 사주테이블 */}
         <section id='scene3' className='relative mt-10'>
           {/* 말풍선2 */}
           <ImageWithWrapper
@@ -125,35 +120,34 @@ export default function Home() {
           </ImageWithWrapper>
 
           {/* SCENE 3 */}
-          <div>
-            <ImageWithWrapper
-              className='absolute w-full'
-              src='/assets/scene3.svg'
-              alt='scene3'
-              ratioWidth={figmaLayout.containerWidth}
-              ratioHeight={figmaLayout.scene3Height}
-            >
-              <div
-                className='absolute inset-x-0'
-                style={{
-                  height: pxu(118),
-                  top: pxu(188),
-                  background:
-                    'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
-                }}
-              />
-            </ImageWithWrapper>
+          <ImageWithWrapper
+            className='absolute w-full'
+            src='/assets/scene3.svg'
+            alt='scene3'
+            ratioWidth={figmaLayout.containerWidth}
+            ratioHeight={figmaLayout.scene3Height}
+          >
+            {/* Gradient */}
             <div
+              className='absolute inset-x-0'
               style={{
-                //* 테이블 위치를 조정하기 위한 padding-top
-                //* 하단 여백을 확보하기 위해, absolute로 하지 않고 relative로 처리
-                // section height가 사주 테이블의 높이에 의해 동적으로 변경되므로, (absolute + top)으로 % 계산이 불가능하다.
-                // 따라서 padding-top으로 부모의 width에 대한 % 계산으로 처리
-                paddingTop: pxu(figmaLayout.scene3PaddingTop),
+                height: pxu(118),
+                top: pxu(188),
+                background:
+                  'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
               }}
             />
-            <SajuTableSection />
-          </div>
+          </ImageWithWrapper>
+
+          {/* 사주테이블 */}
+          <div
+            style={{
+              //* 테이블 위치를 조정하기 위한 padding-top
+              //* 하단 여백을 확보하기 위해, absolute로 하지 않고 relative로 처리
+              paddingTop: pxu(figmaLayout.scene3PaddingTop),
+            }}
+          />
+          <SajuTableSection />
         </section>
       </div>
     </main>
