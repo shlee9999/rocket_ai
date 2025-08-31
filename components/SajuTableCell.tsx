@@ -1,13 +1,11 @@
+import { Cell } from '@/components/SajuTable';
 import { cn } from '@/utils/cn';
-import { separateParentheses } from '@/utils/separateParentheses';
 
-export function SajuTableCell({
-  cell,
-  className,
-}: {
+interface SajuTableCellProps {
   className?: string;
-  cell: string | React.ReactNode | string[];
-}) {
+  cell: Cell | Cell[];
+}
+export function SajuTableCell({ cell, className }: SajuTableCellProps) {
   //* 배열 처리
   if (Array.isArray(cell)) {
     return (
@@ -19,19 +17,20 @@ export function SajuTableCell({
     );
   }
 
-  if (typeof cell === 'string') {
-    return separateParentheses(cell).map((str, index) => (
-      <p
-        key={`${cell}-${index}`}
-        className={cn(
-          'text-center text-xs font-normal',
-          index === 0 && 'font-bold text-sm',
-          className
-        )}
-      >
-        {str}
-      </p>
-    ));
+  //* 없음 처리
+  if (!cell.chinese && !cell.korean) {
+    return <p className='text-center text-xs font-normal'>없음</p>;
   }
-  return cell;
+
+  return (
+    <div>
+      <p
+        key={`${cell.chinese}-${cell.korean}`}
+        className={cn('text-center font-bold text-sm', className)}
+      >
+        {cell.chinese}
+      </p>
+      <p className='text-center text-xs font-normal'>({cell.korean})</p>
+    </div>
+  );
 }

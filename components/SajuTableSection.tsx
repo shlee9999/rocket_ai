@@ -3,7 +3,6 @@ import { getPercentage } from '@/utils/getPercentage';
 import { figmaLayout } from '@/constants/layout';
 import SajuTable from '@/components/SajuTable';
 
-const SajuTableOuterBorderWidth = 3;
 export default function SajuTableSection() {
   return (
     <div
@@ -17,7 +16,7 @@ export default function SajuTableSection() {
       <div
         className='relative bg-[#F5F3EC] w-full h-full border-[#1B2F49]'
         style={{
-          borderWidth: SajuTableOuterBorderWidth,
+          borderWidth: figmaLayout.SajuTableOuterBorderWidth,
         }}
       >
         {/* 가로 border를 가진 영역 */}
@@ -26,15 +25,18 @@ export default function SajuTableSection() {
           style={{
             top: getPercentage(
               8,
-              figmaLayout.sajuTableHeight - SajuTableOuterBorderWidth * 2
+              figmaLayout.sajuTableHeight -
+                figmaLayout.SajuTableOuterBorderWidth * 2
             ),
             bottom: getPercentage(
               8,
-              figmaLayout.sajuTableHeight - SajuTableOuterBorderWidth * 2
+              figmaLayout.sajuTableHeight -
+                figmaLayout.SajuTableOuterBorderWidth * 2
             ),
             paddingInline: getPercentage(
               9,
-              figmaLayout.sajuTableWidth - SajuTableOuterBorderWidth * 2
+              figmaLayout.sajuTableWidth -
+                figmaLayout.SajuTableOuterBorderWidth * 2
             ),
           }}
         >
@@ -98,37 +100,70 @@ const columns = ['時', '日', '月', '年']; // 상단 열 헤더 [3]
 
 const data = [
   {
-    rowHeader: '十星(십성)',
-    values: ['傷官(상관)', '比肩(비견)', '傷官(상관)', '傷官(상관)'],
-  },
-  {
-    rowHeader: '天干(천간)',
-    values: ['壬(임수)', '丁(정화)', '癸(계수)', '癸(계수)'],
-  },
-  {
-    rowHeader: '地支(지지)',
-    values: ['辰(진토)', '巳(사화)', '亥(해수)', '酉(유금)'],
-  },
-
-  {
-    rowHeader: '十星(지지)',
-    values: ['比肩(비견)', '劫財(겁재)', '食神(식신)', '偏財(편재)'],
-  },
-  {
-    rowHeader: '十二運星(12운성)',
-    values: ['死(사)', '帝旺(제왕)', '胎(태)', '長生(장생)'],
-  },
-  {
-    rowHeader: '十二神殺一(십이신살)',
-    values: ['劫殺(겁살)', '地劫(지겁)', '驛馬(역마)', '將星(장성)'],
-  },
-  {
-    rowHeader: '貴人(귀인)',
+    rowHeader: { chinese: '十星', korean: '십성' },
     values: [
-      '',
-      '',
-      '天乙(천을귀인)',
-      ['天乙(천을귀인)', '太極(태극귀인)', '文昌(문창귀인)'],
+      { chinese: '傷官', korean: '상관' },
+      { chinese: '比肩', korean: '비견' },
+      { chinese: '傷官', korean: '상관' },
+      { chinese: '傷官', korean: '상관' },
+    ],
+  },
+  {
+    rowHeader: { chinese: '天干', korean: '천간' },
+    values: [
+      { chinese: '壬', korean: '임수' },
+      { chinese: '丁', korean: '정화' },
+      { chinese: '癸', korean: '계수' },
+      { chinese: '癸', korean: '계수' },
+    ],
+  },
+  {
+    rowHeader: { chinese: '地支', korean: '지지' },
+    values: [
+      { chinese: '辰', korean: '진토' },
+      { chinese: '巳', korean: '사화' },
+      { chinese: '亥', korean: '해수' },
+      { chinese: '酉', korean: '유금' },
+    ],
+  },
+  {
+    rowHeader: { chinese: '十星', korean: '지지' },
+    values: [
+      { chinese: '比肩', korean: '비견' },
+      { chinese: '劫財', korean: '겁재' },
+      { chinese: '食神', korean: '식신' },
+      { chinese: '偏財', korean: '편재' },
+    ],
+  },
+  {
+    rowHeader: { chinese: '十二運星', korean: '12운성' },
+    values: [
+      { chinese: '死', korean: '사' },
+      { chinese: '帝旺', korean: '제왕' },
+      { chinese: '胎', korean: '태' },
+      { chinese: '長生', korean: '장생' },
+    ],
+  },
+  {
+    rowHeader: { chinese: '十二神殺一', korean: '십이신살' },
+    values: [
+      { chinese: '劫殺', korean: '겁살' },
+      { chinese: '地劫', korean: '지겁' },
+      { chinese: '驛馬', korean: '역마' },
+      { chinese: '將星', korean: '장성' },
+    ],
+  },
+  {
+    rowHeader: { chinese: '貴人', korean: '귀인' },
+    values: [
+      { chinese: '', korean: '' },
+      { chinese: '', korean: '' },
+      { chinese: '天乙', korean: '천을귀인' },
+      [
+        { chinese: '天乙', korean: '천을귀인' },
+        { chinese: '太極', korean: '태극귀인' },
+        { chinese: '文昌', korean: '문창귀인' },
+      ],
     ],
   },
 ];

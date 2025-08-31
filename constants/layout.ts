@@ -7,4 +7,5 @@ export const figmaLayout = {
   scene3Height: 306,
   sajuTableWidth: 351, // = containerWidth - 24
   sajuTableHeight: 621,
+  SajuTableOuterBorderWidth: 3,
 };
