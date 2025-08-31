@@ -13,12 +13,17 @@ const BACKGROUND_COLOR = '#F3F2EF';
 export default function Home() {
   return (
     // todo 배경색 제거
-    <main className='relative bg-yellow-500'>
+    <main
+      className='m-auto max-w-md relative bg-yellow-500'
+      style={{
+        maxWidth: figmaLayout.containerWidth, //! 임시
+      }}
+    >
       <div
-        className='m-auto max-w-md'
+        className=''
         style={{
-          maxWidth: figmaLayout.containerWidth, //! 임시
           backgroundColor: BACKGROUND_COLOR,
+          paddingBottom: getPercentage(80 - 23, figmaLayout.containerWidth), //* 사주 테이블 23px 올라와 있으므로
         }}
       >
         {/* SCENE 1: 장면1 + 말풍선1 */}
@@ -134,14 +139,23 @@ export default function Home() {
               </p>
             </div>
           </ImageWithWrapper>
-          <ImageWithWrapper
-            src='/assets/scene3.svg'
-            alt='scene3'
-            ratioWidth={figmaLayout.containerWidth}
-            ratioHeight={figmaLayout.scene3Height}
-          >
+          {/* SCENE 3 */}
+          <div>
+            <ImageWithWrapper
+              className='absolute w-full'
+              src='/assets/scene3.svg'
+              alt='scene3'
+              ratioWidth={figmaLayout.containerWidth}
+              ratioHeight={figmaLayout.scene3Height}
+            />
+            <div
+              style={{
+                width: '100%',
+                paddingTop: getPercentage(283, figmaLayout.containerWidth),
+              }}
+            />
             <SajuTableSection />
-          </ImageWithWrapper>
+          </div>
         </section>
       </div>
     </main>

@@ -7,11 +7,9 @@ import { Row } from '@/types/SajuTable';
 export default function SajuTableSection() {
   return (
     <div
-      className='absolute w-full'
+      className=''
       style={{
         paddingInline: getPercentage(12, figmaLayout.containerWidth),
-        // aspectRatio: figmaLayout.containerWidth / figmaLayout.sajuTableHeight,
-        top: getPercentage(283, figmaLayout.scene3Height),
       }}
     >
       <div
