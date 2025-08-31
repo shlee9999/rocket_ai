@@ -2,7 +2,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #424242;
+
+  /* 반응형 폰트 크기 - Figma 375px 기준 */
+  --font-size-xs: clamp(0.6rem, 3.2vw, 0.75rem); /* 12px */
+  --font-size-sm: clamp(0.7rem, 3.73vw, 0.875rem); /* 14px */
+  --font-size-base: clamp(0.75rem, 4.27vw, 1rem); /* 16px */
+  --font-size-lg: clamp(0.9rem, 4.8vw, 1.125rem); /* 18px */
 }
 
 @theme inline {
@@ -23,4 +29,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.speech-bubble-text {
+  font-size: var(--font-size-base);
+  word-break: keep-all;
 }

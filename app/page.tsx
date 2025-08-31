@@ -8,7 +8,7 @@ const BACKGROUND_COLOR = '#F3F2EF';
 /**
  * [규칙]
  * - 모든 이미지의 크기는 containerWidth를 기준으로 계산
- *
+ * - 최소 320px까지 고려된 반응형 레이아웃
  */
 export default function Home() {
   return (
@@ -64,9 +64,6 @@ export default function Home() {
               width: getPercentage(215, figmaLayout.containerWidth),
               marginLeft: getPercentage(24, figmaLayout.containerWidth),
             }}
-            // 꼬리 포함 height: 139
-            // 꼬리 제외 height: 116
-            // 차이: 23
           >
             <div
               className='absolute inset-0 flex flex-col items-center justify-center text-center '
@@ -74,9 +71,14 @@ export default function Home() {
                 paddingTop: getPercentage(23, 215),
               }}
             >
-              <div className='text-black font-medium text-xs sm:text-sm leading-tight max-w-[90%]'>
-                <p className='mb-1'>이제 본격적으로</p>
-                <p className='mb-1'>OO님의 사주팔자를</p>
+              <div
+                className='speech-bubble-text'
+                style={{
+                  maxWidth: getPercentage(195, 215), // 말풍선 너비 대비 텍스트 영역
+                }}
+              >
+                <p>이제 본격적으로</p>
+                <p>OO님의 사주팔자를</p>
                 <p>분석해볼 차례네요.</p>
               </div>
             </div>
@@ -126,17 +128,13 @@ export default function Home() {
             }}
           >
             <div
-              className='absolute inset-0 flex flex-col items-center justify-center text-center'
+              className='absolute inset-0 flex flex-col items-center justify-center text-center speech-bubble-text'
               style={{
                 paddingBottom: getPercentage(22.78, 239),
               }}
             >
-              <p className='text-black font-medium text-sm whitespace-nowrap'>
-                제가 oo님의 사주를
-              </p>
-              <p className='text-black font-medium text-sm whitespace-nowrap'>
-                보기 쉽게 표로 정리했어요
-              </p>
+              <p>제가 oo님의 사주를</p>
+              <p>보기 쉽게 표로 정리했어요</p>
             </div>
           </ImageWithWrapper>
           {/* SCENE 3 */}
