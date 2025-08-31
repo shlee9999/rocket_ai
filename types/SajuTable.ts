@@ -4,9 +4,11 @@ export type Cell = {
   chinese?: string;
   subChinese?: string;
   korean?: string;
-  className?: string;
+  classNameChinese?: string;
   color?: Color;
   variant?: Variant;
+  classNameKorean?: string;
+  classNameSubChinese?: string;
 };
 export type Row = {
   rowHeader: Cell;

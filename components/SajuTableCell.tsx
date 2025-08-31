@@ -20,7 +20,7 @@ export function SajuTableCell({ cell }: SajuTableCellProps) {
 
   //* 없음 처리
   if (!cell.chinese && !cell.korean) {
-    return <p className='text-center font-size-3xs font-normal'>(없음)</p>;
+    return <p className='text-center font-size-3xs font-bold'>(없음)</p>;
   }
 
   if (cell.variant === 'visual') {
@@ -40,16 +40,22 @@ export function SajuTableCell({ cell }: SajuTableCellProps) {
           width: 'clamp(0px, 10vw, 45px)',
         }}
       >
-        <p style={{ lineHeight: 1 }} className={cn('font-size-4xs')}>
+        <p
+          style={{ lineHeight: 1 }}
+          className={cn('font-size-4xs', cell.classNameKorean)}
+        >
           {cell.korean}
         </p>
         <p
           style={{ lineHeight: 1 }}
-          className={cn('font-size-base font-semibold')}
+          className={cn('font-size-base font-semibold', cell.classNameChinese)}
         >
           {cell.chinese}
         </p>
-        <p style={{ lineHeight: 1 }} className={cn('font-size-4xs')}>
+        <p
+          style={{ lineHeight: 1 }}
+          className={cn('font-size-4xs', cell.classNameSubChinese)}
+        >
           {cell.subChinese}
         </p>
       </div>
@@ -57,10 +63,20 @@ export function SajuTableCell({ cell }: SajuTableCellProps) {
   }
   return (
     <div>
-      <p className={cn('text-center font-bold font-size-sm', cell.className)}>
+      <p
+        className={cn(
+          'text-center font-bold font-size-sm',
+          cell.classNameChinese
+        )}
+      >
         {cell.chinese}
       </p>
-      <p className='text-center text-xs font-bold font-size-3xs'>
+      <p
+        className={cn(
+          'text-center font-bold font-size-3xs',
+          cell.classNameKorean
+        )}
+      >
         ({cell.korean})
       </p>
     </div>
