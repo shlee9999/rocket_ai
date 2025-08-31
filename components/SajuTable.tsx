@@ -1,7 +1,7 @@
-import { SajuTableCell } from "@/components/SajuTableCell";
-import { Row } from "@/types/SajuTable";
-import { cn } from "@/utils/cn";
-import { pxu } from "@/utils/pxu";
+import { SajuTableCell } from '@/components/SajuTableCell';
+import { Row } from '@/types/SajuTable';
+import { cn } from '@/utils/cn';
+import { pxu } from '@/utils/pxu';
 
 interface SajuTableProps {
   columns: string[];
@@ -42,26 +42,16 @@ export default function SajuTable({ columns, data }: SajuTableProps) {
           <tr
             key={rowIndex}
             className={cn(
-              "border-t-2 border-t-black",
-              rowIndex === 2 && "border-t border-t-border-light",
-              "[&:last-child]:border-b-2 [&:last-child]:border-b-black"
+              'border-t-2 border-t-black',
+              rowIndex === 2 && 'border-t border-t-border-light',
+              '[&:last-child]:border-b-2 [&:last-child]:border-b-black'
             )}
           >
-            <th
-              scope="row"
-              id={`row-${rowIndex}`}
-              className="border-r-2 border-r-black"
-            >
+            <th scope="row" id={`row-${rowIndex}`} className="border-r-2 border-r-black">
               <SajuTableCell
                 cell={{
-                  classNameChinese: cn(
-                    "text-2xs",
-                    row.rowHeader.classNameChinese
-                  ),
-                  classNameKorean: cn(
-                    "text-4xs",
-                    row.rowHeader.classNameKorean
-                  ),
+                  classNameChinese: cn('text-2xs', row.rowHeader.classNameChinese),
+                  classNameKorean: cn('text-4xs', row.rowHeader.classNameKorean),
                   ...row.rowHeader,
                 }}
               />

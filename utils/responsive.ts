@@ -7,11 +7,7 @@ import { figmaLayout } from '@/constants/layout';
  * @param maxRem - 최대 크기 (rem)
  * @returns clamp CSS 값
  */
-export function responsiveFontSize(
-  figmaFontSize: number,
-  minRem: number = 0.75,
-  maxRem: number = 1.25
-): string {
+export function responsiveFontSize(figmaFontSize: number, minRem: number = 0.75, maxRem: number = 1.25): string {
   const vwValue = (figmaFontSize / figmaLayout.containerWidth) * 100;
   return `clamp(${minRem}rem, ${vwValue.toFixed(2)}vw, ${maxRem}rem)`;
 }

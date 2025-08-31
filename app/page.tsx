@@ -5,17 +5,17 @@ import { pxu } from '@/utils/pxu';
 
 export default function Home() {
   return (
-    <main className='m-auto max-w-md relative cq-inline'>
+    <main className="m-auto max-w-md relative cq-inline">
       <div
-        className='bg-primary-bg'
+        className="bg-primary-bg"
         style={{
           paddingBottom: pxu(57), //* 사주 테이블 23px 올라와 있으므로 80 - 23 = 57
         }}
       >
         {/* SCENE 1: 장면1 + 말풍선1 */}
         <section
-          id='scene1'
-          className='relative'
+          id="scene1"
+          className="relative"
           style={{
             //* 말풍선 위치 확보를 위한 패딩
             paddingBottom: pxu(figmaLayout.scene1PaddingBottom),
@@ -23,36 +23,35 @@ export default function Home() {
         >
           {/* 장면1. */}
           <ImageWithWrapper
-            src='/assets/scene1.svg'
-            alt='scene1'
+            src="/assets/scene1.svg"
+            alt="scene1"
             ratioWidth={figmaLayout.containerWidth}
             ratioHeight={figmaLayout.scene1Height}
           >
             {/* todo 레이아웃 개선, 페이드아웃 추가 */}
             <div
-              className='absolute inset-x-0'
+              className="absolute inset-x-0"
               style={{
                 height: pxu(195),
                 bottom: pxu(-6),
-                background:
-                  'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
+                background: 'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
               }}
             />
           </ImageWithWrapper>
           {/* 말풍선 1 */}
           <ImageWithWrapper
-            src='/assets/speech_bubble1.svg'
-            alt='speech_bubble1'
+            src="/assets/speech_bubble1.svg"
+            alt="speech_bubble1"
             ratioWidth={215}
             ratioHeight={139}
-            className='absolute bottom-0'
+            className="absolute bottom-0"
             style={{
               width: pxu(figmaLayout.speechBubble1Width),
               marginLeft: pxu(figmaLayout.speechBubble1MarginLeft),
             }}
           >
             <div
-              className='absolute inset-0 flex flex-col items-center justify-center'
+              className="absolute inset-0 flex flex-col items-center justify-center"
               style={{
                 //* 말풍선 꼬리 부분 패딩
                 paddingTop: pxu(figmaLayout.speechBubble1PaddingTop),
@@ -66,11 +65,11 @@ export default function Home() {
         </section>
 
         {/* SCENE 2: 장면2 */}
-        <section id='scene2' className='relative mt-5 flex justify-end'>
+        <section id="scene2" className="relative mt-5 flex justify-end">
           {/* 데코 2 */}
           <ImageWithWrapper
-            src='/assets/deco2.svg'
-            alt='deco2'
+            src="/assets/deco2.svg"
+            alt="deco2"
             ratioWidth={figmaLayout.scene2DecoWidth}
             ratioHeight={figmaLayout.scene2DecoHeight}
             style={{
@@ -81,8 +80,8 @@ export default function Home() {
             }}
           />
           <ImageWithWrapper
-            src='/assets/scene2.svg'
-            alt='scene2'
+            src="/assets/scene2.svg"
+            alt="scene2"
             ratioWidth={figmaLayout.scene2Width}
             ratioHeight={figmaLayout.scene2Height}
             style={{
@@ -93,14 +92,14 @@ export default function Home() {
         </section>
 
         {/* SCENE 3: 말풍선2 + 장면3 + 사주테이블 */}
-        <section id='scene3' className='relative mt-10'>
+        <section id="scene3" className="relative mt-10">
           {/* 말풍선2 */}
           <ImageWithWrapper
-            src='/assets/speech_bubble2.svg'
-            alt='speech_bubble2'
+            src="/assets/speech_bubble2.svg"
+            alt="speech_bubble2"
             ratioWidth={figmaLayout.scene3SpeechBubbleWidth}
             ratioHeight={figmaLayout.scene3SpeechBubbleHeight}
-            className='absolute z-[1]'
+            className="absolute z-[1]"
             style={{
               left: pxu(figmaLayout.scene3SpeechBubbleMarginLeft),
               top: pxu(figmaLayout.scene3SpeechBubbleMarginTop),
@@ -108,7 +107,7 @@ export default function Home() {
             }}
           >
             <div
-              className='absolute inset-0 flex flex-col items-center justify-center text-center speech-bubble-text'
+              className="absolute inset-0 flex flex-col items-center justify-center text-center speech-bubble-text"
               style={{
                 //* 말풍선 꼬리 부분 패딩
                 paddingBottom: pxu(figmaLayout.scene3SpeechBubblePaddingBottom),
@@ -121,20 +120,19 @@ export default function Home() {
 
           {/* SCENE 3 */}
           <ImageWithWrapper
-            className='absolute w-full'
-            src='/assets/scene3.svg'
-            alt='scene3'
+            className="absolute w-full"
+            src="/assets/scene3.svg"
+            alt="scene3"
             ratioWidth={figmaLayout.containerWidth}
             ratioHeight={figmaLayout.scene3Height}
           >
             {/* Gradient */}
             <div
-              className='absolute inset-x-0'
+              className="absolute inset-x-0"
               style={{
                 height: pxu(118),
                 top: pxu(188),
-                background:
-                  'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
+                background: 'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
               }}
             />
           </ImageWithWrapper>

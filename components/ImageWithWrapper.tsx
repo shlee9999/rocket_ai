@@ -27,7 +27,7 @@ export default function ImageWithWrapper({
         ...style,
       }}
       className={cn('relative', className)}
-      role='img'
+      role="img"
     >
       <Image src={src} alt={alt} fill />
       {children}

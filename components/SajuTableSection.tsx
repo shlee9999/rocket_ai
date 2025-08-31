@@ -1,8 +1,8 @@
-import SajuTable from "@/components/SajuTable";
-import { figmaLayout } from "@/constants/layout";
-import { sajuColumns, sajuData } from "@/data/saju-data";
-import ImageWithWrapper from "./ImageWithWrapper";
-import { pxu } from "@/utils/pxu";
+import SajuTable from '@/components/SajuTable';
+import { figmaLayout } from '@/constants/layout';
+import { sajuColumns, sajuData } from '@/data/saju-data';
+import ImageWithWrapper from './ImageWithWrapper';
+import { pxu } from '@/utils/pxu';
 
 export default function SajuTableSection() {
   return (
@@ -64,7 +64,7 @@ export default function SajuTableSection() {
           ratioWidth={figmaLayout.sajuTableDecoWidth}
           ratioHeight={figmaLayout.sajuTableDecoHeight}
           style={{
-            position: "absolute",
+            position: 'absolute',
             width: pxu(figmaLayout.sajuTableDecoWidth),
             top: pxu(figmaLayout.sajuTableDecoLeftTop),
             left: pxu(figmaLayout.sajuTableDecoLeftLeft),
@@ -76,7 +76,7 @@ export default function SajuTableSection() {
           ratioWidth={figmaLayout.sajuTableDecoWidth}
           ratioHeight={figmaLayout.sajuTableDecoHeight}
           style={{
-            position: "absolute",
+            position: 'absolute',
             width: pxu(figmaLayout.sajuTableDecoWidth),
             top: pxu(figmaLayout.sajuTableDecoRightTop),
             right: pxu(figmaLayout.sajuTableDecoRightRight),
