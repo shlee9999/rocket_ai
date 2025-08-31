@@ -1,16 +1,18 @@
 import { Cell } from '@/types/SajuTable';
 import { cn } from '@/utils/cn';
 
-type SajuTableCellProps = Cell | Cell[];
+interface SajuTableCellProps {
+  cell: Cell | Cell[];
+}
 
 // 2F2F2F, C23030,  18868C
-export function SajuTableCell({ ...cell }: SajuTableCellProps) {
+export function SajuTableCell({ cell }: SajuTableCellProps) {
   //* 배열 처리
   if (Array.isArray(cell)) {
     return (
       <div className={cn('flex flex-col gap-1')}>
         {cell.map((item, index) => (
-          <SajuTableCell key={`array-${index}`} {...item} />
+          <SajuTableCell key={`array-${index}`} cell={item} />
         ))}
       </div>
     );

@@ -31,14 +31,14 @@ export default function SajuTable({ columns, data }: SajuTableProps) {
         {data.map((row, rowIndex) => (
           <tr key={rowIndex}>
             <th scope='row'>
-              <SajuTableCell {...row.rowHeader} />
+              <SajuTableCell cell={row.rowHeader} />
             </th>
             {row.values.map((cell, cellIndex) => (
               <td
                 key={cellIndex}
                 className='bg-[#F9FBFE] p-[5px] border border-[#D9D9D9]'
               >
-                <SajuTableCell {...cell} />
+                <SajuTableCell cell={cell} />
               </td>
             ))}
           </tr>
