@@ -3,8 +3,6 @@ import SajuTableSection from '@/components/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
 import { pxu } from '@/utils/pxu';
 
-// 배경색은 이제 TailwindCSS 커스텀 색상으로 사용
-
 /**
  * [규칙]
  * - 모든 이미지의 크기는 containerWidth를 기준으로 계산
@@ -37,10 +35,12 @@ export default function Home() {
           >
             {/* todo 레이아웃 개선, 페이드아웃 추가 */}
             <div
-              className='absolute inset-x-0 h-[300px]'
+              className='absolute inset-x-0'
               style={{
                 height: pxu(195),
                 bottom: pxu(-6),
+                background:
+                  'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
               }}
             />
           </ImageWithWrapper>
@@ -132,7 +132,17 @@ export default function Home() {
               alt='scene3'
               ratioWidth={figmaLayout.containerWidth}
               ratioHeight={figmaLayout.scene3Height}
-            />
+            >
+              <div
+                className='absolute inset-x-0'
+                style={{
+                  height: pxu(118),
+                  top: pxu(188),
+                  background:
+                    'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
+                }}
+              />
+            </ImageWithWrapper>
             <div
               style={{
                 //* 테이블 위치를 조정하기 위한 padding-top
