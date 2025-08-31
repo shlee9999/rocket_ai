@@ -1,5 +1,5 @@
 import ImageWithWrapper from '@/components/ImageWrapper';
-import SajuTableSection from '@/components/SajuTable';
+import SajuTableSection from '@/components/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
 import { getPercentage } from '@/utils/getPercentage';
 
