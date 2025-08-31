@@ -27,12 +27,12 @@ export function SajuTableCell({ cell }: SajuTableCellProps) {
     return (
       <div
         className={cn(
-          'relative rounded-[20%] flex flex-col justify-between items-center text-[#F9FBFE] m-auto',
-          cell.color === 'black' && 'bg-[#2F2F2F] ',
-          cell.color === 'red' && 'bg-[#C23030]',
-          cell.color === 'blueGreen' && 'bg-[#18868C]',
+          'relative rounded-[20%] flex flex-col justify-between items-center text-saju-white m-auto',
+          cell.color === 'black' && 'bg-saju-black',
+          cell.color === 'red' && 'bg-saju-red',
+          cell.color === 'blueGreen' && 'bg-saju-blue-green',
           cell.color === 'white' &&
-            'bg-[#F9FBFE] text-[#2F2F2F] border border-[#2F2F2F]'
+            'bg-saju-white text-saju-black border border-saju-black'
         )}
         style={{
           aspectRatio: 1,

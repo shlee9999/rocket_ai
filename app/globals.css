@@ -4,6 +4,28 @@
   --background: #ffffff;
   --foreground: #424242;
 
+  /* 배경색 계열 */
+  --color-primary-bg: #f3f2ef;
+  --color-secondary-bg: #f5f3ec;
+  --color-tertiary-bg: #f9fbfe;
+
+  /* 테두리색 계열 */
+  --color-border-primary: #1b2f49;
+  --color-border-secondary: #2b557e;
+  --color-border-light: #d9d9d9;
+  --color-border-dark: #2f2f2f;
+
+  /* 사주 오행 색상 */
+  --color-saju-black: #2f2f2f;
+  --color-saju-red: #c23030;
+  --color-saju-blue-green: #18868c;
+  --color-saju-white: #f9fbfe;
+
+  /* 텍스트 색상 */
+  --color-text-primary: #424242;
+  --color-text-dark: #2f2f2f;
+  --color-text-light: #f9fbfe;
+
   /* 반응형 폰트 크기 - Figma 375px 기준 */
   /* 최소 크기 제한이 없어, 최솟값을 0rem 으로 설정 */
   --font-size-5xs: clamp(0rem, 1.5vw, 0.35rem); /* 6px */
@@ -23,6 +45,29 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* 배경색 계열 */
+  --color-primary-bg: var(--color-primary-bg);
+  --color-secondary-bg: var(--color-secondary-bg);
+  --color-tertiary-bg: var(--color-tertiary-bg);
+
+  /* 테두리색 계열 */
+  --color-border-primary: var(--color-border-primary);
+  --color-border-secondary: var(--color-border-secondary);
+  --color-border-light: var(--color-border-light);
+  --color-border-dark: var(--color-border-dark);
+
+  /* 사주 오행 색상 */
+  --color-saju-black: var(--color-saju-black);
+  --color-saju-red: var(--color-saju-red);
+  --color-saju-blue-green: var(--color-saju-blue-green);
+  --color-saju-white: var(--color-saju-white);
+
+  /* 텍스트 색상 */
+  --color-text-primary: var(--color-text-primary);
+  --color-text-dark: var(--color-text-dark);
+  --color-text-light: var(--color-text-light);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

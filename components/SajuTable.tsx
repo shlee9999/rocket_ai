@@ -36,7 +36,7 @@ export default function SajuTable({ columns, data }: SajuTableProps) {
             {row.values.map((cell, cellIndex) => (
               <td
                 key={cellIndex}
-                className='bg-[#F9FBFE] p-[5px] border border-[#D9D9D9]'
+                className='bg-tertiary-bg p-[5px] border border-border-light'
               >
                 <SajuTableCell cell={cell} />
               </td>

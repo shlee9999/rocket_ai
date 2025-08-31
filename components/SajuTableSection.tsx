@@ -13,7 +13,7 @@ export default function SajuTableSection() {
       }}
     >
       <div
-        className='relative bg-[#F5F3EC] w-full h-full border-[#1B2F49]'
+        className='relative bg-secondary-bg w-full h-full border-border-primary'
         style={{
           paddingBlock: getPercentage(8, figmaLayout.containerWidth),
           borderWidth: figmaLayout.SajuTableOuterBorderWidth,
@@ -21,7 +21,7 @@ export default function SajuTableSection() {
       >
         {/* 가로 border를 가진 영역 */}
         <div
-          className='border-y-[1px] border-[#2B557E]'
+          className='border-y-[1px] border-border-secondary'
           style={{
             top: getPercentage(
               8,
@@ -97,7 +97,7 @@ export default function SajuTableSection() {
 
         {/* 세로 border 박스 */}
         <div
-          className='absolute border-x-[1px] border-[#2B557E]'
+          className='absolute border-x-[1px] border-border-secondary'
           style={{
             top: 0,
             bottom: 0,

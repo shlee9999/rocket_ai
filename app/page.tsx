@@ -3,7 +3,7 @@ import SajuTableSection from '@/components/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
 import { getPercentage } from '@/utils/getPercentage';
 
-const BACKGROUND_COLOR = '#F3F2EF';
+// 배경색은 이제 TailwindCSS 커스텀 색상으로 사용
 
 /**
  * [규칙]
@@ -20,9 +20,8 @@ export default function Home() {
       }}
     >
       <div
-        className=''
+        className='bg-primary-bg'
         style={{
-          backgroundColor: BACKGROUND_COLOR,
           paddingBottom: getPercentage(80 - 23, figmaLayout.containerWidth), //* 사주 테이블 23px 올라와 있으므로
         }}
       >
