@@ -1,6 +1,7 @@
 import ImageWithWrapper from '@/components/ImageWithWrapper';
 import SajuTableSection from '@/components/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
+import { pxu } from '@/utils/pxu';
 
 // 배경색은 이제 TailwindCSS 커스텀 색상으로 사용
 
@@ -21,7 +22,7 @@ export default function Home() {
       <div
         className='bg-primary-bg'
         style={{
-          paddingBottom: 'calc(57 * var(--u))', //* 사주 테이블 23px 올라와 있으므로 80 - 23 = 57
+          paddingBottom: pxu(57), //* 사주 테이블 23px 올라와 있으므로 80 - 23 = 57
         }}
       >
         {/* SCENE 1: 장면1 + 말풍선1 */}
@@ -29,7 +30,7 @@ export default function Home() {
           id='scene1'
           className='relative'
           style={{
-            paddingBottom: `calc(${figmaLayout.scene1PaddingBottom} * var(--u))`,
+            paddingBottom: pxu(figmaLayout.scene1PaddingBottom),
           }}
         >
           {/* 장면1. */}
@@ -43,8 +44,8 @@ export default function Home() {
             <div
               className='absolute inset-x-0 h-[300px]'
               style={{
-                height: 'calc(195 * var(--u))',
-                bottom: 'calc(-6 * var(--u))',
+                height: pxu(195),
+                bottom: pxu(-6),
               }}
             />
           </ImageWithWrapper>
@@ -56,20 +57,20 @@ export default function Home() {
             ratioHeight={139}
             className='absolute bottom-0'
             style={{
-              width: 'calc(215 * var(--u))',
-              marginLeft: 'calc(24 * var(--u))',
+              width: pxu(215),
+              marginLeft: pxu(24),
             }}
           >
             <div
               className='absolute inset-0 flex flex-col items-center justify-center text-center '
               style={{
-                paddingTop: 'calc(23 * var(--u))',
+                paddingTop: pxu(23),
               }}
             >
               <div
                 className='speech-bubble-text'
                 style={{
-                  maxWidth: 'calc(195 * var(--u))', // 말풍선 너비 대비 텍스트 영역
+                  maxWidth: pxu(195), // 말풍선 너비 대비 텍스트 영역
                 }}
               >
                 <p>이제 본격적으로</p>
@@ -90,8 +91,8 @@ export default function Home() {
             style={{
               position: 'absolute',
               left: 0,
-              width: 'calc(153 * var(--u))',
-              bottom: 'calc(38 * var(--u))',
+              width: pxu(153),
+              bottom: pxu(38),
             }}
           />
           <ImageWithWrapper
@@ -100,8 +101,8 @@ export default function Home() {
             ratioWidth={161}
             ratioHeight={285}
             style={{
-              marginLeft: 'calc(24 * var(--u))',
-              width: 'calc(161 * var(--u))',
+              marginLeft: pxu(24),
+              width: pxu(161),
             }}
           />
         </section>
@@ -116,15 +117,15 @@ export default function Home() {
             ratioHeight={138.78}
             className='absolute z-[1]'
             style={{
-              left: 'calc(24 * var(--u))',
-              top: 'calc(-104 * var(--u))',
-              width: 'calc(239 * var(--u))',
+              left: pxu(24),
+              top: pxu(-104),
+              width: pxu(239),
             }}
           >
             <div
               className='absolute inset-0 flex flex-col items-center justify-center text-center speech-bubble-text'
               style={{
-                paddingBottom: 'calc(22.78 * var(--u))',
+                paddingBottom: pxu(22.78),
               }}
             >
               <p>제가 oo님의 사주를</p>
@@ -144,7 +145,7 @@ export default function Home() {
             {/* 테이블 위치를 조정하기 위한 div */}
             <div
               style={{
-                paddingTop: 'calc(283 * var(--u))',
+                paddingTop: pxu(283),
               }}
             />
             <SajuTableSection />
