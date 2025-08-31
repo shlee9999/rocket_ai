@@ -41,16 +41,16 @@ export function SajuTableCell({ cell }: SajuTableCellProps) {
         }}
       >
         <p style={{ lineHeight: 1 }} className={cn('font-size-4xs')}>
-          임
+          {cell.korean}
         </p>
         <p
           style={{ lineHeight: 1 }}
           className={cn('font-size-base font-semibold')}
         >
-          星
+          {cell.chinese}
         </p>
         <p style={{ lineHeight: 1 }} className={cn('font-size-4xs')}>
-          星星
+          {cell.subChinese}
         </p>
       </div>
     );
