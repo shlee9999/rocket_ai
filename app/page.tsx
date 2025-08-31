@@ -138,12 +138,6 @@ export default function Home() {
             alt='scene3'
             ratioWidth={figmaLayout.containerWidth}
             ratioHeight={figmaLayout.scene3Height}
-            style={{
-              width: getPercentage(
-                figmaLayout.containerWidth,
-                figmaLayout.containerWidth
-              ),
-            }}
           >
             {/* 사주표 */}
             <div
@@ -151,7 +145,7 @@ export default function Home() {
               style={{
                 paddingInline: getPercentage(12, figmaLayout.containerWidth),
                 aspectRatio:
-                  figmaLayout.sajuTableWidth / figmaLayout.sajuTableHeight,
+                  figmaLayout.containerWidth / figmaLayout.sajuTableHeight,
                 top: getPercentage(283, figmaLayout.scene3Height),
               }}
             >
