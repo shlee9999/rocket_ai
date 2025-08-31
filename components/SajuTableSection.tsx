@@ -47,7 +47,7 @@ export default function SajuTableSection() {
               marginTop: getPercentage(32, figmaLayout.sajuTableWidth - 24),
             }}
           >
-            <span className='font-size-xs' style={{ lineHeight: 1 }}>
+            <span className='font-size-sm' style={{ lineHeight: 1 }}>
               김로켓님의 사주
             </span>
             <span

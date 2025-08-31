@@ -2,6 +2,7 @@ import ImageWithWrapper from '@/components/ImageWithWrapper';
 import SajuTableSection from '@/components/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
 import { getPercentage } from '@/utils/getPercentage';
+import { getCqw } from '@/utils/getCqw';
 
 // 배경색은 이제 TailwindCSS 커스텀 색상으로 사용
 
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     // todo 배경색 제거
     <main
-      className='m-auto max-w-md relative bg-yellow-500'
+      className='m-auto max-w-md relative bg-yellow-500 cq-inline'
       style={{
         maxWidth: figmaLayout.containerWidth, //! 임시
       }}
@@ -122,7 +123,7 @@ export default function Home() {
             className='absolute z-[1]'
             style={{
               left: getPercentage(24, figmaLayout.containerWidth),
-              bottom: getPercentage(271.22, figmaLayout.scene3Height),
+              top: `-${getCqw(104, figmaLayout.containerWidth)}`,
               width: getPercentage(239, figmaLayout.containerWidth),
             }}
           >
@@ -136,6 +137,7 @@ export default function Home() {
               <p>보기 쉽게 표로 정리했어요</p>
             </div>
           </ImageWithWrapper>
+
           {/* SCENE 3 */}
           <div>
             <ImageWithWrapper

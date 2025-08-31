@@ -114,3 +114,8 @@ body {
     font-size: var(--font-size-xl);
   }
 }
+
+/* Container query: inline-size queries enabled helper */
+.cq-inline {
+  container-type: inline-size;
+}
