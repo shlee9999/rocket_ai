@@ -1,5 +1,5 @@
 import ImageWithWrapper from '@/components/ImageWrapper';
-import SajuTable from '@/components/SajuTable';
+import SajuTableSection from '@/components/SajuTable';
 import { figmaLayout } from '@/constants/layout';
 import { getPercentage } from '@/utils/getPercentage';
 
@@ -12,6 +12,7 @@ const BACKGROUND_COLOR = '#F3F2EF';
  */
 export default function Home() {
   return (
+    // todo 배경색 제거
     <main className='relative bg-yellow-500'>
       <div
         className='m-auto max-w-md'
@@ -105,7 +106,7 @@ export default function Home() {
         </section>
 
         {/* SCENE 3: 정리표 */}
-        <section id='scene3' className='relative bg-red-500 mt-10'>
+        <section id='scene3' className='relative mt-10'>
           {/* 말풍선2 */}
           <ImageWithWrapper
             src='/assets/speech_bubble2.svg'
@@ -139,18 +140,7 @@ export default function Home() {
             ratioWidth={figmaLayout.containerWidth}
             ratioHeight={figmaLayout.scene3Height}
           >
-            {/* 사주표 */}
-            <div
-              className='absolute w-full'
-              style={{
-                paddingInline: getPercentage(12, figmaLayout.containerWidth),
-                aspectRatio:
-                  figmaLayout.containerWidth / figmaLayout.sajuTableHeight,
-                top: getPercentage(283, figmaLayout.scene3Height),
-              }}
-            >
-              <SajuTable />
-            </div>
+            <SajuTableSection />
           </ImageWithWrapper>
         </section>
       </div>
