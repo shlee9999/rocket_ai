@@ -17,7 +17,6 @@ export default function SajuTableSection() {
         style={{
           paddingBlock: getPercentage(8, figmaLayout.containerWidth),
           borderWidth: figmaLayout.SajuTableOuterBorderWidth,
-          // paddingBottom: getPercentage(32, figmaLayout.sajuTableHeight),
         }}
       >
         {/* 가로 border를 가진 영역 */}
@@ -42,7 +41,6 @@ export default function SajuTableSection() {
           }}
         >
           {/* 내부 Width: figmaLayout.sajuTableWidth - 24 */}
-          {/* <div className='w-full h-full bg-yellow-500'></div> */}
           <div
             className='flex flex-col justify-between items-center'
             style={{
@@ -63,7 +61,13 @@ export default function SajuTableSection() {
             </span>
           </div>
           {/* 사주테이블 */}
-          <SajuTable columns={columns} data={data} />
+          <div
+            style={{
+              paddingInline: getPercentage(12, figmaLayout.sajuTableWidth - 24),
+            }}
+          >
+            <SajuTable columns={columns} data={data} />
+          </div>
         </div>
         {/* Decorations */}
         <ImageWithWrapper
@@ -147,7 +151,11 @@ const data = [
     ],
   },
   {
-    rowHeader: { chinese: '十二運星', korean: '12운성' },
+    rowHeader: {
+      chinese: '十二運星',
+      korean: '12운성',
+      className: 'font-size-3xs',
+    },
     values: [
       { chinese: '死', korean: '사' },
       { chinese: '帝旺', korean: '제왕' },
@@ -156,7 +164,11 @@ const data = [
     ],
   },
   {
-    rowHeader: { chinese: '十二神殺一', korean: '십이신살' },
+    rowHeader: {
+      chinese: '十二神殺',
+      korean: '십이신살',
+      className: 'font-size-3xs',
+    },
     values: [
       { chinese: '劫殺', korean: '겁살' },
       { chinese: '地劫', korean: '지겁' },

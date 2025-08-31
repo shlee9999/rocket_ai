@@ -25,7 +25,7 @@ export function SajuTableCell({ ...cell }: SajuTableCellProps) {
     return (
       <div
         className={cn(
-          'relative rounded-lg flex flex-col justify-between items-center text-[#F9FBFE] m-auto',
+          'relative rounded-[20%] flex flex-col justify-between items-center text-[#F9FBFE] m-auto',
           cell.color === 'black' && 'bg-[#2F2F2F] ',
           cell.color === 'red' && 'bg-[#C23030]',
           cell.color === 'blueGreen' && 'bg-[#18868C]',
@@ -34,13 +34,22 @@ export function SajuTableCell({ ...cell }: SajuTableCellProps) {
         )}
         style={{
           aspectRatio: 1,
-          padding: '0.1rem',
-          width: 'clamp(28px, 10vw, 45px)',
+          padding: 'clamp(0px, 1.5vw, 0.15rem)',
+          width: 'clamp(0px, 10vw, 45px)',
         }}
       >
-        <p className={cn('font-size-4xs')}>임</p>
-        <p className={cn('font-size-base font-semibold')}>星</p>
-        <p className={cn('font-size-4xs')}>星星</p>
+        <p style={{ lineHeight: 1 }} className={cn('font-size-4xs')}>
+          임
+        </p>
+        <p
+          style={{ lineHeight: 1 }}
+          className={cn('font-size-base font-semibold')}
+        >
+          星
+        </p>
+        <p style={{ lineHeight: 1 }} className={cn('font-size-4xs')}>
+          星星
+        </p>
       </div>
     );
   }
