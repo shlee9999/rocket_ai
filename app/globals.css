@@ -115,7 +115,15 @@ body {
   }
 }
 
-/* Container query: inline-size queries enabled helper */
+/* 컨테이너 쿼리  */
 .cq-inline {
   container-type: inline-size;
+  /* Figma Layout 375px 기준으로 작업할 것이므로 100cqw을 375px로 나누고, 그 값을 var(--u)에 저장 */
+  --u: calc(100cqw / 375);
+}
+
+@supports not (width: 1cqw) {
+  .cq-inline {
+    --u: calc(100% / 375);
+  }
 }

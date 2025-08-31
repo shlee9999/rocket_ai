@@ -9,13 +9,13 @@ export default function SajuTableSection() {
     <div
       className=''
       style={{
-        paddingInline: getPercentage(12, figmaLayout.containerWidth),
+        paddingInline: 'calc(12 * var(--u))',
       }}
     >
       <div
         className='relative bg-secondary-bg w-full h-full border-border-primary'
         style={{
-          paddingBlock: getPercentage(8, figmaLayout.containerWidth),
+          paddingBlock: 'calc(8 * var(--u))',
           borderWidth: figmaLayout.SajuTableOuterBorderWidth,
         }}
       >

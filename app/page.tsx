@@ -2,7 +2,6 @@ import ImageWithWrapper from '@/components/ImageWithWrapper';
 import SajuTableSection from '@/components/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
 import { getPercentage } from '@/utils/getPercentage';
-import { getCqw } from '@/utils/getCqw';
 
 // 배경색은 이제 TailwindCSS 커스텀 색상으로 사용
 
@@ -23,7 +22,7 @@ export default function Home() {
       <div
         className='bg-primary-bg'
         style={{
-          paddingBottom: getPercentage(80 - 23, figmaLayout.containerWidth), //* 사주 테이블 23px 올라와 있으므로
+          paddingBottom: 'calc(57 * var(--u))', //* 사주 테이블 23px 올라와 있으므로 80 - 23 = 57
         }}
       >
         {/* SCENE 1: 장면1 + 말풍선1 */}
@@ -31,10 +30,7 @@ export default function Home() {
           id='scene1'
           className='relative'
           style={{
-            paddingBottom: getPercentage(
-              figmaLayout.scene1PaddingBottom,
-              figmaLayout.containerWidth
-            ),
+            paddingBottom: `calc(${figmaLayout.scene1PaddingBottom} * var(--u))`,
           }}
         >
           {/* 장면1. */}
@@ -61,8 +57,8 @@ export default function Home() {
             ratioHeight={139}
             className='absolute bottom-0'
             style={{
-              width: getPercentage(215, figmaLayout.containerWidth),
-              marginLeft: getPercentage(24, figmaLayout.containerWidth),
+              width: 'calc(215 * var(--u))',
+              marginLeft: 'calc(24 * var(--u))',
             }}
           >
             <div
@@ -95,7 +91,7 @@ export default function Home() {
             style={{
               position: 'absolute',
               left: 0,
-              width: getPercentage(153, figmaLayout.containerWidth),
+              width: 'calc(153 * var(--u))',
               bottom: getPercentage(38, figmaLayout.scene2Height),
             }}
           />
@@ -106,8 +102,8 @@ export default function Home() {
             ratioHeight={285}
             style={{
               // marginRight: getPercentage(24, figmaLayout.containerWidth),
-              marginLeft: getPercentage(24, figmaLayout.containerWidth),
-              width: getPercentage(161, figmaLayout.containerWidth),
+              marginLeft: 'calc(24 * var(--u))',
+              width: 'calc(161 * var(--u))',
             }}
           />
         </section>
@@ -122,9 +118,9 @@ export default function Home() {
             ratioHeight={138.78}
             className='absolute z-[1]'
             style={{
-              left: getPercentage(24, figmaLayout.containerWidth),
-              top: `-${getCqw(104, figmaLayout.containerWidth)}`,
-              width: getPercentage(239, figmaLayout.containerWidth),
+              left: 'calc(24 * var(--u))',
+              top: 'calc(-104 * var(--u))',
+              width: 'calc(239 * var(--u))',
             }}
           >
             <div
@@ -147,10 +143,10 @@ export default function Home() {
               ratioWidth={figmaLayout.containerWidth}
               ratioHeight={figmaLayout.scene3Height}
             />
+            {/* 테이블 위치를 조정하기 위한 div */}
             <div
               style={{
-                width: '100%',
-                paddingTop: getPercentage(283, figmaLayout.containerWidth),
+                paddingTop: 'calc(283 * var(--u))',
               }}
             />
             <SajuTableSection />
