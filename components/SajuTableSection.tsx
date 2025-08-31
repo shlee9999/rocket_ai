@@ -9,14 +9,14 @@ export default function SajuTableSection() {
     <div
       className=''
       style={{
-        paddingInline: pxu(12),
+        paddingInline: pxu(figmaLayout.sajuTablePaddingInline),
       }}
     >
       <div
         className='relative bg-secondary-bg w-full h-full border-border-primary'
         style={{
-          paddingBlock: pxu(8),
-          borderWidth: figmaLayout.SajuTableOuterBorderWidth,
+          paddingBlock: pxu(figmaLayout.sajuTableOuterPadding),
+          borderWidth: figmaLayout.sajuTableOuterBorderWidth,
         }}
       >
         {/* 가로 border를 가진 영역 */}
@@ -61,29 +61,25 @@ export default function SajuTableSection() {
         <ImageWithWrapper
           src='/assets/left.svg'
           alt='left'
-          ratioWidth={56}
-          ratioHeight={38}
-          decorative
-          sizes='56px'
+          ratioWidth={figmaLayout.sajuTableDecoWidth}
+          ratioHeight={figmaLayout.sajuTableDecoHeight}
           style={{
             position: 'absolute',
-            width: pxu(56),
-            top: pxu(45),
-            left: pxu(9),
+            width: pxu(figmaLayout.sajuTableDecoWidth),
+            top: pxu(figmaLayout.sajuTableDecoLeftTop),
+            left: pxu(figmaLayout.sajuTableDecoLeftLeft),
           }}
         />
         <ImageWithWrapper
           src='/assets/right.svg'
           alt='right'
-          ratioWidth={56}
-          ratioHeight={38}
-          decorative
-          sizes='56px'
+          ratioWidth={figmaLayout.sajuTableDecoWidth}
+          ratioHeight={figmaLayout.sajuTableDecoHeight}
           style={{
             position: 'absolute',
-            width: pxu(56),
-            top: pxu(26),
-            right: pxu(9),
+            width: pxu(figmaLayout.sajuTableDecoWidth),
+            top: pxu(figmaLayout.sajuTableDecoRightTop),
+            right: pxu(figmaLayout.sajuTableDecoRightRight),
           }}
         />
 
@@ -93,8 +89,8 @@ export default function SajuTableSection() {
           style={{
             top: 0,
             bottom: 0,
-            left: pxu(8),
-            right: pxu(8),
+            left: pxu(figmaLayout.sajuTableOuterPadding),
+            right: pxu(figmaLayout.sajuTableOuterPadding),
           }}
         />
       </div>
