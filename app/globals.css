@@ -36,6 +36,7 @@
   --font-size-sm: clamp(0rem, 3.73vw, 0.875rem); /* 14px */
   --font-size-base: clamp(0rem, 4.27vw, 1rem); /* 16px */
   --font-size-lg: clamp(0rem, 4.8vw, 1.125rem); /* 18px */
+  --font-size-xl: clamp(0rem, 5.33vw, 1.25rem); /* 20px */
 }
 
 * {
@@ -68,6 +69,17 @@
   --color-text-dark: var(--color-text-dark);
   --color-text-light: var(--color-text-light);
 
+  /* 폰트 크기 토큰 (Tailwind text-*) */
+  --text-5xs: var(--font-size-5xs);
+  --text-4xs: var(--font-size-4xs);
+  --text-3xs: var(--font-size-3xs);
+  --text-2xs: var(--font-size-2xs);
+  --text-xs: var(--font-size-xs);
+  --text-sm: var(--font-size-sm);
+  --text-base: var(--font-size-base);
+  --text-lg: var(--font-size-lg);
+  --text-xl: var(--font-size-xl);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -79,33 +91,6 @@ body {
   font-size: var(--font-size-base);
 }
 @layer utilities {
-  .font-size-5xs {
-    font-size: var(--font-size-5xs);
-  }
-  .font-size-4xs {
-    font-size: var(--font-size-4xs);
-  }
-  .font-size-3xs {
-    font-size: var(--font-size-3xs);
-  }
-  .font-size-2xs {
-    font-size: var(--font-size-2xs);
-  }
-  .font-size-xs {
-    font-size: var(--font-size-xs);
-  }
-  .font-size-sm {
-    font-size: var(--font-size-sm);
-  }
-  .font-size-base {
-    font-size: var(--font-size-base);
-  }
-  .font-size-lg {
-    font-size: var(--font-size-lg);
-  }
-  .font-size-xl {
-    font-size: var(--font-size-xl);
-  }
 }
 
 /* 컨테이너 쿼리  */
