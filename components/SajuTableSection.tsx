@@ -2,6 +2,7 @@ import ImageWithWrapper from './ImageWrapper';
 import { getPercentage } from '@/utils/getPercentage';
 import { figmaLayout } from '@/constants/layout';
 import SajuTable from '@/components/SajuTable';
+import { Row } from '@/types/SajuTable';
 
 export default function SajuTableSection() {
   return (
@@ -9,19 +10,21 @@ export default function SajuTableSection() {
       className='absolute w-full'
       style={{
         paddingInline: getPercentage(12, figmaLayout.containerWidth),
-        aspectRatio: figmaLayout.containerWidth / figmaLayout.sajuTableHeight,
+        // aspectRatio: figmaLayout.containerWidth / figmaLayout.sajuTableHeight,
         top: getPercentage(283, figmaLayout.scene3Height),
       }}
     >
       <div
         className='relative bg-[#F5F3EC] w-full h-full border-[#1B2F49]'
         style={{
+          paddingBlock: getPercentage(8, figmaLayout.containerWidth),
           borderWidth: figmaLayout.SajuTableOuterBorderWidth,
+          // paddingBottom: getPercentage(32, figmaLayout.sajuTableHeight),
         }}
       >
         {/* 가로 border를 가진 영역 */}
         <div
-          className='absolute border-y-[1px] border-[#2B557E] inset-x-0'
+          className='border-y-[1px] border-[#2B557E]'
           style={{
             top: getPercentage(
               8,
@@ -49,7 +52,7 @@ export default function SajuTableSection() {
             }}
           >
             <span>김로켓님의 사주</span>
-            <span>1980년 8월 27일 08:10</span>
+            <span className='text-xl font-bold'>1980년 8월 27일 08:10</span>
           </div>
           {/* 사주테이블 */}
           <SajuTable columns={columns} data={data} />
@@ -116,6 +119,7 @@ const data = [
       { chinese: '癸', korean: '계수' },
       { chinese: '癸', korean: '계수' },
     ],
+    variant: 'visual',
   },
   {
     rowHeader: { chinese: '地支', korean: '지지' },
@@ -125,6 +129,7 @@ const data = [
       { chinese: '亥', korean: '해수' },
       { chinese: '酉', korean: '유금' },
     ],
+    variant: 'visual',
   },
   {
     rowHeader: { chinese: '十星', korean: '지지' },
@@ -166,4 +171,4 @@ const data = [
       ],
     ],
   },
-];
+] satisfies Row[];

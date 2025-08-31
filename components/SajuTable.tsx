@@ -1,11 +1,8 @@
 import { SajuTableCell } from '@/components/SajuTableCell';
+import { figmaLayout } from '@/constants/layout';
+import { Row } from '@/types/SajuTable';
+import { getPercentage } from '@/utils/getPercentage';
 
-export type Row = { rowHeader: Cell; values: (Cell | Cell[])[] };
-
-export type Cell = {
-  chinese?: string;
-  korean?: string;
-};
 interface SajuTableProps {
   columns: string[];
   data: Row[];
@@ -13,7 +10,13 @@ interface SajuTableProps {
 
 export default function SajuTable({ columns, data }: SajuTableProps) {
   return (
-    <table className='w-full border-collapse'>
+    <table
+      className='w-full border-collapse'
+      style={{
+        marginTop: getPercentage(20, figmaLayout.sajuTableHeight),
+        marginBottom: getPercentage(32, figmaLayout.sajuTableHeight),
+      }}
+    >
       <thead>
         <tr>
           <th />
@@ -31,8 +34,15 @@ export default function SajuTable({ columns, data }: SajuTableProps) {
               <SajuTableCell cell={row.rowHeader} />
             </th>
             {row.values.map((cell, cellIndex) => (
-              <td key={cellIndex}>
-                <SajuTableCell cell={cell} />
+              <td
+                key={cellIndex}
+                className='bg-[#F9FBFE] p-[5px] border border-[#D9D9D9]'
+              >
+                <SajuTableCell
+                  cell={cell}
+                  variant={row.variant}
+                  color={row.color}
+                />
               </td>
             ))}
           </tr>
