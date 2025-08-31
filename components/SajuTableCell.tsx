@@ -1,25 +1,16 @@
-import { Cell, Color } from '@/types/SajuTable';
+import { Cell } from '@/types/SajuTable';
 import { cn } from '@/utils/cn';
 
-interface SajuTableCellProps {
-  className?: string;
-  cell: Cell | Cell[];
-  variant?: 'normal' | 'visual';
-  color?: Color;
-}
+type SajuTableCellProps = Cell | Cell[];
+
 // 2F2F2F, C23030,  18868C
-export function SajuTableCell({
-  cell,
-  className,
-  variant = 'normal',
-  color = 'black',
-}: SajuTableCellProps) {
+export function SajuTableCell({ ...cell }: SajuTableCellProps) {
   //* 배열 처리
   if (Array.isArray(cell)) {
     return (
-      <div className={cn('flex flex-col gap-1', className)}>
+      <div className={cn('flex flex-col gap-1')}>
         {cell.map((item, index) => (
-          <SajuTableCell key={`array-${index}`} cell={item} variant={variant} />
+          <SajuTableCell key={`array-${index}`} {...item} />
         ))}
       </div>
     );
@@ -27,38 +18,40 @@ export function SajuTableCell({
 
   //* 없음 처리
   if (!cell.chinese && !cell.korean) {
-    return <p className='text-center text-xs font-normal'>없음</p>;
+    return <p className='text-center font-size-3xs font-normal'>(없음)</p>;
   }
 
-  if (variant === 'visual') {
+  if (cell.variant === 'visual') {
     return (
       <div
         className={cn(
-          'relative rounded-lg flex flex-col items-center text-[#F9FBFE] w-[38px] m-auto',
-          color === 'black' && 'bg-[#2F2F2F]',
-          color === 'red' && 'bg-[#C23030]',
-          color === 'blueGreen' && 'bg-[#18868C]'
+          'relative rounded-lg flex flex-col justify-between items-center text-[#F9FBFE] m-auto',
+          cell.color === 'black' && 'bg-[#2F2F2F] ',
+          cell.color === 'red' && 'bg-[#C23030]',
+          cell.color === 'blueGreen' && 'bg-[#18868C]',
+          cell.color === 'white' &&
+            'bg-[#F9FBFE] text-[#2F2F2F] border border-[#2F2F2F]'
         )}
         style={{
           aspectRatio: 1,
           padding: '0.1rem',
+          width: 'clamp(28px, 10vw, 45px)',
         }}
       >
-        <p className='text-[0.3rem] '>임</p>
-        <p className='text-sm'>星</p>
-        <p className='text-[0.3rem]'>星星</p>
+        <p className={cn('font-size-4xs')}>임</p>
+        <p className={cn('font-size-base font-semibold')}>星</p>
+        <p className={cn('font-size-4xs')}>星星</p>
       </div>
     );
   }
   return (
     <div>
-      <p
-        key={`${cell.chinese}-${cell.korean}`}
-        className={cn('text-center font-bold text-sm', className)}
-      >
+      <p className={cn('text-center font-bold font-size-sm', cell.className)}>
         {cell.chinese}
       </p>
-      <p className='text-center text-xs font-normal'>({cell.korean})</p>
+      <p className='text-center text-xs font-bold font-size-3xs'>
+        ({cell.korean})
+      </p>
     </div>
   );
 }

@@ -44,13 +44,23 @@ export default function SajuTableSection() {
           {/* 내부 Width: figmaLayout.sajuTableWidth - 24 */}
           {/* <div className='w-full h-full bg-yellow-500'></div> */}
           <div
-            className='flex flex-col justify-between items-center gap-3'
+            className='flex flex-col justify-between items-center'
             style={{
               marginTop: getPercentage(32, figmaLayout.sajuTableWidth - 24),
             }}
           >
-            <span>김로켓님의 사주</span>
-            <span className='text-xl font-bold'>1980년 8월 27일 08:10</span>
+            <span className='font-size-xs' style={{ lineHeight: 1 }}>
+              김로켓님의 사주
+            </span>
+            <span
+              className='font-bold font-size-lg'
+              style={{
+                lineHeight: 1,
+                marginTop: getPercentage(12, figmaLayout.sajuTableWidth - 24),
+              }}
+            >
+              1980년 8월 27일 08:10
+            </span>
           </div>
           {/* 사주테이블 */}
           <SajuTable columns={columns} data={data} />
@@ -112,22 +122,20 @@ const data = [
   {
     rowHeader: { chinese: '天干', korean: '천간' },
     values: [
-      { chinese: '壬', korean: '임수' },
-      { chinese: '丁', korean: '정화' },
-      { chinese: '癸', korean: '계수' },
-      { chinese: '癸', korean: '계수' },
+      { chinese: '壬', korean: '임수', variant: 'visual', color: 'black' },
+      { chinese: '丁', korean: '정화', variant: 'visual', color: 'red' },
+      { chinese: '癸', korean: '계수', variant: 'visual', color: 'black' },
+      { chinese: '癸', korean: '계수', variant: 'visual', color: 'black' },
     ],
-    variant: 'visual',
   },
   {
     rowHeader: { chinese: '地支', korean: '지지' },
     values: [
-      { chinese: '辰', korean: '진토' },
-      { chinese: '巳', korean: '사화' },
-      { chinese: '亥', korean: '해수' },
-      { chinese: '酉', korean: '유금' },
+      { chinese: '辰', korean: '진토', variant: 'visual', color: 'blueGreen' },
+      { chinese: '巳', korean: '사화', variant: 'visual', color: 'black' },
+      { chinese: '亥', korean: '해수', variant: 'visual', color: 'black' },
+      { chinese: '酉', korean: '유금', variant: 'visual', color: 'white' },
     ],
-    variant: 'visual',
   },
   {
     rowHeader: { chinese: '十星', korean: '지지' },
