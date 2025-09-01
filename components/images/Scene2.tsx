@@ -1,4 +1,4 @@
-import ImageWithWrapper from '@/components/ImageWithWrapper';
+import ImageWithWrapper from '@/components/common/ImageWithWrapper';
 import { figmaLayout } from '@/constants/layout';
 
 interface Scene2Props {

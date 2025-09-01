@@ -1,5 +1,5 @@
-import Scene1 from '@/components/Scene1';
-import SpeechBubble1 from '@/components/SpeechBubble1';
+import Scene1 from '@/components/images/Scene1';
+import SpeechBubble1 from '@/components/images/SpeechBubble1';
 import { figmaLayout } from '@/constants/layout';
 import { pxu } from '@/utils/pxu';
 

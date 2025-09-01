@@ -1,4 +1,4 @@
-import { SajuTableCell } from '@/components/SajuTableCell';
+import { SajuTableCell } from '@/components/SajuTable/SajuTableCell';
 import { Row } from '@/types/SajuTable';
 import { cn } from '@/utils/cn';
 import { pxu } from '@/utils/pxu';

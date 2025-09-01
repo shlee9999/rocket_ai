@@ -1,4 +1,4 @@
-import ImageWithWrapper from '@/components/ImageWithWrapper';
+import ImageWithWrapper from '@/components/common/ImageWithWrapper';
 import { figmaLayout } from '@/constants/layout';
 import { pxu } from '@/utils/pxu';
 

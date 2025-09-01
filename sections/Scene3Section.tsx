@@ -1,6 +1,6 @@
-import SpeechBubble2 from '@/components/SpeechBubble2';
-import Scene3 from '@/components/Scene3';
-import SajuTableSection from '@/components/SajuTableSection';
+import SpeechBubble2 from '@/components/images/SpeechBubble2';
+import Scene3 from '@/components/images/Scene3';
+import SajuTableSection from '@/components/SajuTable/SajuTableSection';
 import { figmaLayout } from '@/constants/layout';
 import { pxu } from '@/utils/pxu';
 
