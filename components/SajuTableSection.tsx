@@ -7,7 +7,6 @@ import { pxu } from '@/utils/pxu';
 export default function SajuTableSection() {
   return (
     <div
-      className=""
       style={{
         paddingInline: pxu(figmaLayout.sajuTablePaddingInline),
       }}
