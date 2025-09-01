@@ -26,17 +26,20 @@
   --color-text-dark: #2f2f2f;
   --color-text-light: #f9fbfe;
 
+  /* 컨테이너/뷰포트 스케일 유닛 (Figma 375 기준) */
+  --u: calc(100vw / 375);
+
   /* 반응형 폰트 크기 - Figma 375px 기준 */
   /* 최소 크기 제한이 없어, 최솟값을 0rem 으로 설정 */
-  --font-size-5xs: clamp(0rem, 1.5vw, 0.35rem); /* 6px */
-  --font-size-4xs: clamp(0rem, 1.8vw, 0.45rem); /* 7.2px */
-  --font-size-3xs: clamp(0rem, 2.4vw, 0.55rem); /* 8.8px */
-  --font-size-2xs: clamp(0rem, 2.8vw, 0.65rem); /* 10.4px */
-  --font-size-xs: clamp(0rem, 3.2vw, 0.75rem); /* 12px */
-  --font-size-sm: clamp(0rem, 3.73vw, 0.875rem); /* 14px */
-  --font-size-base: clamp(0rem, 4.27vw, 1rem); /* 16px */
-  --font-size-lg: clamp(0rem, 4.8vw, 1.125rem); /* 18px */
-  --font-size-xl: clamp(0rem, 5.33vw, 1.25rem); /* 20px */
+  --font-size-5xs: clamp(0rem, calc(5.625 * var(--u)), 0.35rem); /* 1.5vw @375 = 5.625px */
+  --font-size-4xs: clamp(0rem, calc(6.75 * var(--u)), 0.45rem); /* 1.8vw @375 = 6.75px */
+  --font-size-3xs: clamp(0rem, calc(9 * var(--u)), 0.55rem); /* 2.4vw @375 = 9px */
+  --font-size-2xs: clamp(0rem, calc(10.5 * var(--u)), 0.65rem); /* 2.8vw @375 = 10.5px */
+  --font-size-xs: clamp(0rem, calc(12 * var(--u)), 0.75rem); /* 12px */
+  --font-size-sm: clamp(0rem, calc(14 * var(--u)), 0.875rem); /* 14px */
+  --font-size-base: clamp(0rem, calc(16 * var(--u)), 1rem); /* 16px */
+  --font-size-lg: clamp(0rem, calc(18 * var(--u)), 1.125rem); /* 18px */
+  --font-size-xl: clamp(0rem, calc(20 * var(--u)), 1.25rem); /* 20px */
 }
 
 * {
@@ -87,7 +90,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   font-size: var(--font-size-base);
 }
 

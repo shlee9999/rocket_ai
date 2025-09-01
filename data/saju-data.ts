@@ -93,7 +93,7 @@ export const sajuData = [
     rowHeader: {
       chinese: '十二運星',
       korean: '12운성',
-      classNameChinese: 'font-size-3xs',
+      classNameChinese: 'text-3xs',
     },
     values: [
       { chinese: '死', korean: '사' },
@@ -106,7 +106,7 @@ export const sajuData = [
     rowHeader: {
       chinese: '十二神殺',
       korean: '십이신살',
-      classNameChinese: 'font-size-3xs',
+      classNameChinese: 'text-3xs',
     },
     values: [
       { chinese: '劫殺', korean: '겁살' },
