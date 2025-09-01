@@ -1,8 +1,6 @@
 import Scene1Section from '@/sections/Scene1Section';
 import Scene2Section from '@/sections/Scene2Section';
 import Scene3Section from '@/sections/Scene3Section';
-import SajuTableSection from '@/components/SajuTableSection';
-import { figmaLayout } from '@/constants/layout';
 import { pxu } from '@/utils/pxu';
 
 export default function Home() {
@@ -24,5 +22,3 @@ export default function Home() {
     </main>
   );
 }
-
-// 138.78 -104 = 34.78
