@@ -15,7 +15,7 @@
   --color-border-light: #d9d9d9;
   --color-border-dark: #2f2f2f;
 
-  /* 사주 오행 색상 */
+  /* 사주 테이블 색상 */
   --color-saju-black: #2f2f2f;
   --color-saju-red: #c23030;
   --color-saju-blue-green: #18868c;
@@ -31,19 +31,15 @@
 
   /* 반응형 폰트 크기 - Figma 375px 기준 */
   /* 최소 크기 제한이 없어, 최솟값을 0rem 으로 설정 */
-  --font-size-5xs: clamp(0rem, calc(5.625 * var(--u)), 0.35rem); /* 1.5vw @375 = 5.625px */
-  --font-size-4xs: clamp(0rem, calc(6.75 * var(--u)), 0.45rem); /* 1.8vw @375 = 6.75px */
-  --font-size-3xs: clamp(0rem, calc(9 * var(--u)), 0.55rem); /* 2.4vw @375 = 9px */
-  --font-size-2xs: clamp(0rem, calc(10.5 * var(--u)), 0.65rem); /* 2.8vw @375 = 10.5px */
-  --font-size-xs: clamp(0rem, calc(12 * var(--u)), 0.75rem); /* 12px */
-  --font-size-sm: clamp(0rem, calc(14 * var(--u)), 0.875rem); /* 14px */
-  --font-size-base: clamp(0rem, calc(16 * var(--u)), 1rem); /* 16px */
-  --font-size-lg: clamp(0rem, calc(18 * var(--u)), 1.125rem); /* 18px */
-  --font-size-xl: clamp(0rem, calc(20 * var(--u)), 1.25rem); /* 20px */
-}
-
-* {
-  word-break: keep-all; /* 단어 단위로 줄바꿈 */
+  --font-size-5xs: clamp(0rem, calc(5.625 * var(--u)), 0.35rem);
+  --font-size-4xs: clamp(0rem, calc(6.75 * var(--u)), 0.45rem);
+  --font-size-3xs: clamp(0rem, calc(9 * var(--u)), 0.55rem);
+  --font-size-2xs: clamp(0rem, calc(10.5 * var(--u)), 0.65rem);
+  --font-size-xs: clamp(0rem, calc(12 * var(--u)), 0.75rem);
+  --font-size-sm: clamp(0rem, calc(14 * var(--u)), 0.875rem);
+  --font-size-base: clamp(0rem, calc(16 * var(--u)), 1rem);
+  --font-size-lg: clamp(0rem, calc(18 * var(--u)), 1.125rem);
+  --font-size-xl: clamp(0rem, calc(20 * var(--u)), 1.25rem);
 }
 
 @theme inline {

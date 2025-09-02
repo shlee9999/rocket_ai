@@ -91,7 +91,6 @@ export default function RootLayout({
           <div className="absolute inset-0 h-full bg-[#f2f2f2]" />
           {/* header height */}
           <div className="h-[3.75rem]" />
-          {/* background */}
           {children}
         </main>
       </body>

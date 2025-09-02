@@ -11,7 +11,6 @@ interface Scene3SectionProps {
 export default function Scene3Section({ id = 'scene3' }: Scene3SectionProps) {
   return (
     <section id={id} className="mt-10">
-      {/* 말풍선2 */}
       <SpeechBubble2
         className="absolute z-[1]"
         style={{
@@ -23,9 +22,9 @@ export default function Scene3Section({ id = 'scene3' }: Scene3SectionProps) {
 
       <Scene3 className="absolute w-full" />
 
+      {/* 사주테이블 위치 조정을 위한 div */}
       <div
         style={{
-          // 사주테이블 위치 조정을 위한 div
           paddingTop: pxu(figmaLayout.scene3PaddingTop),
         }}
       />

@@ -5,7 +5,6 @@ interface SajuTableCellProps {
   cell: Cell | Cell[];
 }
 
-// 2F2F2F, C23030,  18868C
 export function SajuTableCell({ cell }: SajuTableCellProps) {
   //* 배열 처리
   if (Array.isArray(cell)) {
