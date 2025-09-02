@@ -21,13 +21,15 @@ export default function SajuTable({ columns, data }: SajuTableProps) {
       <caption className="sr-only">사주 정보 테이블</caption>
       <thead>
         <tr>
-          <th className="border-r-2 border-r-black" />
+          <th className="border-r-2 border-r-black">
+            <span className="sr-only">항목</span>
+          </th>
           {columns.map((c, colIndex) => (
             <th
               key={c}
               scope="col"
               id={`col-${colIndex}`}
-              className="border-r-1 border-r-border-light [&:last-child]:border-r-2 [&:last-child]:border-r-black text-lg"
+              className="border-r border-r-border-light [&:last-child]:border-r-2 [&:last-child]:border-r-black text-lg"
               style={{
                 lineHeight: 2,
               }}

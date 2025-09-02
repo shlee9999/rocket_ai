@@ -29,7 +29,7 @@ export default function Scene3Section({ id = 'scene3' }: Scene3SectionProps) {
           paddingTop: pxu(figmaLayout.scene3PaddingTop),
         }}
       />
-      <SajuTableSection />
+      <SajuTableSection userName="김로켓" birthDateTime="1980년 8월 27일 08:10" />
     </section>
   );
 }

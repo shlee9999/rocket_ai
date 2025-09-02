@@ -4,7 +4,12 @@ import { sajuColumns, sajuData } from '@/data/saju-data';
 import { pxu } from '@/utils/pxu';
 import { SajuTableDecoLeft, SajuTableDecoRight } from '@/components/images/Decorations';
 
-export default function SajuTableSection() {
+interface SajuTableSectionProps {
+  userName: string;
+  birthDateTime: string;
+}
+
+export default function SajuTableSection({ userName, birthDateTime }: SajuTableSectionProps) {
   return (
     <div
       style={{
@@ -35,7 +40,7 @@ export default function SajuTableSection() {
             }}
           >
             <span className="text-sm" style={{ lineHeight: 1 }}>
-              김로켓님의 사주
+              {userName}님의 사주
             </span>
             <span
               className="font-bold text-lg"
@@ -44,7 +49,7 @@ export default function SajuTableSection() {
                 marginTop: pxu(12),
               }}
             >
-              1980년 8월 27일 08:10
+              {birthDateTime}
             </span>
           </div>
           {/* 사주테이블 */}

@@ -9,6 +9,7 @@ interface ImageWithWrapperProps {
   className?: string;
   style?: React.CSSProperties;
   children?: React.ReactNode;
+  sizes?: string;
 }
 
 export default function ImageWithWrapper({
@@ -19,6 +20,7 @@ export default function ImageWithWrapper({
   className,
   style,
   children,
+  sizes = '(max-width: 448px) 100vw, 448px',
 }: ImageWithWrapperProps) {
   return (
     <div
@@ -28,7 +30,7 @@ export default function ImageWithWrapper({
       }}
       className={cn('relative', className)}
     >
-      <Image src={src} alt={alt} fill />
+      <Image src={src} alt={alt} fill sizes={sizes} />
       {children}
     </div>
   );
