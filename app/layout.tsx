@@ -30,6 +30,11 @@ export const metadata = {
     '홍연아씨',
     '사주 만화',
   ],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    viewportFit: 'cover',
+  },
   publisher: 'shlee9999',
   openGraph: {
     title: '운세박사 청월당 - 프리미엄 웹툰 사주, 타로, 궁합, 작명, 해몽, AI 사주, 인공지능 운세',
@@ -38,6 +43,14 @@ export const metadata = {
     type: 'website',
     locale: 'ko_KR',
     siteName: '운세박사 청월당',
+    images: [
+      {
+        url: 'https://secretfriend.blob.core.windows.net/fortunedoctor/front/images/og/og_bluemoonlady.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    url: 'https://aifortunedoctor.com/s/bluemoonladysaju',
   },
   robots: {
     index: true,
