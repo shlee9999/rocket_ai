@@ -60,27 +60,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <header className="fixed inset-x-0 z-40 flex h-[3.75rem] justify-center mx-auto max-w-md bg-white md:h-[3.75rem]">
-        <div className="flex w-full items-center justify-between px-6 xl:max-w-[77.5rem] md:px-6 xl:px-6">
-          <ImageWithWrapper
-            src="/assets/logo_with_black_typo.png"
-            alt="logo"
-            ratioWidth={351}
-            ratioHeight={101}
-            className="h-6 min-w-0"
-          />
-        </div>
-      </header>
-      <main className="relative">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <h1 className="sr-only">운세박사 - 청월당 프리미엄 사주 웹툰</h1>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <h1 className="sr-only">운세박사 - 청월당 프리미엄 사주 웹툰</h1>
+        <header className="fixed inset-x-0 z-40 flex h-[3.75rem] justify-center mx-auto max-w-md bg-white md:h-[3.75rem]">
+          <div className="flex w-full items-center justify-between px-6 xl:max-w-[77.5rem] md:px-6 xl:px-6">
+            <ImageWithWrapper
+              src="/assets/logo_with_black_typo.png"
+              alt="logo"
+              ratioWidth={351}
+              ratioHeight={101}
+              className="h-6 min-w-0"
+            />
+          </div>
+        </header>
+        <main className="relative">
           <div className="absolute inset-0 h-full bg-[#f2f2f2]" />
           {/* header height */}
           <div className="h-[3.75rem]" />
           {/* background */}
           {children}
-        </body>
-      </main>
+        </main>
+      </body>
     </html>
   );
 }
