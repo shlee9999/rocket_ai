@@ -5,10 +5,7 @@ import { pxu } from '@/utils/pxu';
 
 export default function Home() {
   return (
-    <main
-      className="m-auto max-w-md relative cq-inline"
-      // style={{ width: 375 }} //! 임시 width
-    >
+    <main className="m-auto max-w-md relative cq-inline">
       <div
         className="bg-primary-bg [&>section]:relative"
         style={{
