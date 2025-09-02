@@ -20,30 +20,18 @@ export const viewport: Viewport = {
 };
 
 export const metadata = {
-  title: '운세박사 청월당 - 프리미엄 웹툰 사주, 타로, 궁합, 작명, 해몽, AI 사주, 인공지능 운세',
+  title: '청월아씨 정통사주 - 청월당 프리미엄 사주 웹툰 | 운세박사 청월당',
   description:
-    '오직 나만을 위한 청담동 프리미엄 웹툰형 종합사주를 만나보세요! 고민이 있으신가요? 미래가 불안하신가요? 명리학, 점성술을 오랜 시간 공부한 청담동 명리학 역술가, 타로 술사 청월아씨, 월하소녀, 몽월소녀, 홍연아씨가 나의 미래 운세를 상세하게 봐드립니다. 세계 1위 인공지능 사주팔자 운세박사에서 AI 사주, 해몽, 타로, 운세, 작명, 궁합을 봐보세요! 인공지능으로 정확한 운세를 점쳐보세요. 오늘의 운세, 연애운, 애정운, 금전운, 연애상담, 고민상담을 받아보세요.',
-  keywords: [
-    '사주',
-    '팔자',
-    '만화',
-    '웹툰',
-    '운세',
-    '사주 분석',
-    '청월아씨',
-    '월하소녀',
-    '몽월소녀',
-    '홍연아씨',
-    '사주 만화',
-  ],
+    '청담동 프리미엄 종합사주. 세계 1위 청담동 사주팔자 전문가 청월아씨의 운세 해석 결과를 무료로 확인하세요! 재벌, 연예인들이 찾는 점술가 청월아씨의 사주 해석을 통해 평생 운세를 알아보세요. AI 사주, 인터넷 사주, 사주 사이트, 사주 잘보는 곳! 안좋은 운세도 솔직하게 알려드립니다. 청담동 점짐 청월아씨가 봐주는 사주 운세!',
+  keywords: ['사주', '팔자', '만화', '웹툰', '운세', '사주 분석', '청월아씨', '사주 만화'],
   publisher: 'shlee9999',
   openGraph: {
-    title: '운세박사 청월당 - 프리미엄 웹툰 사주, 타로, 궁합, 작명, 해몽, AI 사주, 인공지능 운세',
+    title: '청월아씨 정통사주 - 청월당 프리미엄 사주 웹툰 | 운세박사 청월당',
     description:
-      '오직 나만을 위한 청담동 프리미엄 웹툰형 종합사주를 만나보세요! 고민이 있으신가요? 미래가 불안하신가요? 명리학, 점성술을 오랜 시간 공부한 청담동 명리학 역술가, 타로 술사 청월아씨, 월하소녀, 몽월소녀, 홍연아씨가 나의 미래 운세를 상세하게 봐드립니다. 세계 1위 인공지능 사주팔자 운세박사에서 AI 사주, 해몽, 타로, 운세, 작명, 궁합을 봐보세요! 인공지능으로 정확한 운세를 점쳐보세요. 오늘의 운세, 연애운, 애정운, 금전운, 연애상담, 고민상담을 받아보세요.',
+      '청담동 프리미엄 종합사주. 세계 1위 청담동 사주팔자 전문가 청월아씨의 운세 해석 결과를 무료로 확인하세요! 재벌, 연예인들이 찾는 점술가 청월아씨의 사주 해석을 통해 평생 운세를 알아보세요. AI 사주, 인터넷 사주, 사주 사이트, 사주 잘보는 곳! 안좋은 운세도 솔직하게 알려드립니다. 청담동 점짐 청월아씨가 봐주는 사주 운세!',
     type: 'website',
     locale: 'ko_KR',
-    siteName: '운세박사 청월당',
+    siteName: '운세박사',
     images: [
       {
         url: 'https://secretfriend.blob.core.windows.net/fortunedoctor/front/images/og/og_bluemoonlady.png',
@@ -59,7 +47,6 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
@@ -75,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <h1 className="sr-only">운세박사 - 청월당 프리미엄 사주 웹툰</h1>
+        <h1 className="sr-only">청월아씨 정통사주 - 청월당 프리미엄 사주 웹툰</h1>
         <header className="fixed inset-x-0 z-40 flex h-[3.75rem] justify-center mx-auto max-w-md bg-white md:h-[3.75rem]">
           <div className="flex w-full items-center justify-between px-6 xl:max-w-[77.5rem] md:px-6 xl:px-6">
             <ImageWithWrapper
