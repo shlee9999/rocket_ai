@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import ImageWithWrapper from '@/components/common/ImageWithWrapper';
 
 const geistSans = Geist({
@@ -12,6 +12,12 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata = {
   title: '운세박사 청월당 - 프리미엄 웹툰 사주, 타로, 궁합, 작명, 해몽, AI 사주, 인공지능 운세',
@@ -30,11 +36,6 @@ export const metadata = {
     '홍연아씨',
     '사주 만화',
   ],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    viewportFit: 'cover',
-  },
   publisher: 'shlee9999',
   openGraph: {
     title: '운세박사 청월당 - 프리미엄 웹툰 사주, 타로, 궁합, 작명, 해몽, AI 사주, 인공지능 운세',
