@@ -92,7 +92,7 @@ export const sajuData = [
   {
     rowHeader: {
       chinese: '十二運星',
-      korean: '12운성',
+      korean: '십이운성',
       classNameChinese: 'text-3xs',
     },
     values: [
