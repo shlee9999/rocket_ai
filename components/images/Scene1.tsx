@@ -1,6 +1,7 @@
 import ImageWithWrapper from '@/components/common/ImageWithWrapper';
 import { figmaLayout } from '@/constants/layout';
 import { pxu } from '@/utils/pxu';
+import FadeOverlay from '@/components/common/FadeOverlay';
 
 interface Scene1Props {
   className?: string;
@@ -17,14 +18,7 @@ export default function Scene1({ className, style }: Scene1Props) {
       ratioHeight={figmaLayout.scene1Height}
       style={style}
     >
-      <div
-        className="absolute inset-x-0"
-        style={{
-          height: pxu(195),
-          bottom: pxu(-6),
-          background: 'linear-gradient(180deg, rgba(243,242,239,0) 0%, #F3F2EF 100%)',
-        }}
-      />
+      <FadeOverlay style={{ height: pxu(195), bottom: pxu(-6) }} />
     </ImageWithWrapper>
   );
 }
